@@ -16,3 +16,7 @@ Started making the new theme. First, change ``conf.py`` to import the
 theme and point at it. Missing a ``theme.conf`` so let's start there. This
 then meant creating sphinx_bulma.css and sphinx_bulma.support.SphinxBulma
 all as clones from alabaster.
+
+Took sphinx/themes/basic/layout.html and copied it into sphinx_bulma's
+templates directory as basic_layout.html.  This is the primary file that
+will be converted to Bulma.
