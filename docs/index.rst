@@ -10,7 +10,7 @@ Welcome to sphinx-bulma's documentation!
    :maxdepth: 2
    :caption: Contents:
 
-
+   diary.rst
 
 Indices and tables
 ==================

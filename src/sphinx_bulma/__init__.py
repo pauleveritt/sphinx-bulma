@@ -1,6 +1,6 @@
 __version__ = "0.0.1"
 
-__title__ = "sphinx-bulma"
+__title__ = "sphinx_bulma"
 __description__ = "Sphinx theme using Bulma CSS framework"
 __uri__ = "https://github.com/pauleveritt/sphinx-bulma"
 __doc__ = __description__ + " <" + __uri__ + ">"

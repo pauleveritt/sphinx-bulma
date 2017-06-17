@@ -8,7 +8,7 @@ from setuptools import setup, find_packages
 
 ########
 
-NAME = "sphinx-bulma"
+NAME = "sphinx_bulma"
 PACKAGES = find_packages(where="src")
 META_PATH = os.path.join("src", "sphinx_bulma", "__init__.py")
 KEYWORDS = ["sphinx", "ablog", "theme"]
