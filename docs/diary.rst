@@ -11,3 +11,8 @@ and his ``attrs`` project.
 Used PyCharm to generate sphinx quickstart. I then replaced the
 ``docs/conf.py`` settings that related to project name, version, etc. with
 the values in ``src/sphinx_bulma/__init__.py`` that follow Hynek's approach.
+
+Started making the new theme. First, change ``conf.py`` to import the
+theme and point at it. Missing a ``theme.conf`` so let's start there. This
+then meant creating sphinx_bulma.css and sphinx_bulma.support.SphinxBulma
+all as clones from alabaster.

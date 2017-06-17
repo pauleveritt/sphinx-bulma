@@ -29,6 +29,11 @@ INSTALL_REQUIRES = [
     'sphinx'
 ]
 
+ENTRY_POINTS = {
+    'sphinx_themes': [
+        'path = sphinx_bulma:get_path',
+    ]
+}
 ########
 
 HERE = os.path.abspath(os.path.dirname(__file__))
@@ -77,4 +82,6 @@ if __name__ == "__main__":
         zip_safe=False,
         classifiers=CLASSIFIERS,
         install_requires=INSTALL_REQUIRES,
+        entry_points=ENTRY_POINTS
+
     )
