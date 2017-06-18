@@ -1,0 +1,25 @@
+{
+  "name": "sphinx-bulma",
+  "version": "0.0.1",
+  "description": "Sphinx theme using the Bulma CSS Framework",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pauleveritt/sphinx-bulma.git"
+  },
+  "author": "Paul Everitt <pauleveritt@me.com>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/pauleveritt/sphinx-bulma/issues"
+  },
+  "homepage": "https://github.com/pauleveritt/sphinx-bulma#readme",
+  "dependencies": {
+    "bulma": "^0.4.2"
+  }
+}
