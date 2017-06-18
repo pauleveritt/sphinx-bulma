@@ -20,3 +20,8 @@ all as clones from alabaster.
 Took sphinx/themes/basic/layout.html and copied it into sphinx_bulma's
 templates directory as basic_layout.html.  This is the primary file that
 will be converted to Bulma.
+
+Before converting to Bulma, let's improve the workflow using the
+``livereload`` package from PyPI, which has Sphinx auto-run integration.
+This also means having a dev-requirements.txt package, to hold the
+livereload requirement.
