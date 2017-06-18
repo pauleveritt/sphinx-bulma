@@ -1,6 +1,12 @@
-@import "node_modules/bulma/sass/utilities/initial-variables";
+@import "../../node_modules/bulma/sass/utilities/initial-variables";
 
 $family-primary: $family-sans-serif;
 
-@import "node_modules/bulma/bulma";
+.nav-item .button + .button {
+  margin-left: 10px;
+}
+
+$info: $turquoise;
+
+@import "../../node_modules/bulma/bulma";
 
