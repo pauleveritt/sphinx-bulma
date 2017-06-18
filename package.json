@@ -7,7 +7,7 @@
     "doc": "docs"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "scss": "node-sass --watch --output-style compressed -o src/sphinx_bulma/static src/sphinx_bulma"
   },
   "repository": {
     "type": "git",
@@ -21,5 +21,8 @@
   "homepage": "https://github.com/pauleveritt/sphinx-bulma#readme",
   "dependencies": {
     "bulma": "^0.4.2"
+  },
+  "devDependencies": {
+    "node-sass": "^4.5.3"
   }
 }
