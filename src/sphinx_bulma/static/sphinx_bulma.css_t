@@ -57,7 +57,7 @@
 /* -- page layout ----------------------------------------------------------- */
 
 body {
-    font-family: {{ theme_font_family }};
+    xxx-font-family: {{ theme_font_family }};
     font-size: {{ theme_font_size }};
     background-color: {{ theme_base_bg }};
     color: {{ theme_base_text }};

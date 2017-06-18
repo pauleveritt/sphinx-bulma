@@ -24,4 +24,9 @@ will be converted to Bulma.
 Before converting to Bulma, let's improve the workflow using the
 ``livereload`` package from PyPI, which has Sphinx auto-run integration.
 This also means having a dev-requirements.txt package, to hold the
-livereload requirementss.
+livereload requirements.
+
+Made a basic src/sphinx_bulma/sphinx_bulma_base.scss which imported
+everything and did no substituting. Need to get it included, so for now,
+just did an @import on the first line in css_t.
+
