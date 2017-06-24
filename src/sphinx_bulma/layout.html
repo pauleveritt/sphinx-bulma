@@ -14,7 +14,8 @@
           type="text/css"/>
 </head>
 <body>
-<section class="hero is-primary is-large header-image">
+<section
+        class="hero is-primary is-large {{ 'header-image' if pagename == 'index' }}">
     <div class="hero-head">
         <header class="nav">
             <div class="container">
@@ -62,85 +63,105 @@
             </div>
         </header>
     </div>
-    <div class="hero-body">
-        <div class="container has-text-centered">
-            <h1 class="title is-2">
-                Hero Heading
-            </h1>
-            <h2 class="subtitle is-5">
-                A hero description could go here.
-            </h2>
+    {% if pagename == 'index' %}
+        <div class="hero-body">
+            <div class="container has-text-centered">
+                <h1 class="title is-2">
+                    Hero Heading
+                </h1>
+                <h2 class="subtitle is-5">
+                    A hero description could go here.
+                </h2>
+            </div>
         </div>
-    </div>
+    {% endif %}
 </section>
 <div class="section main">
-    <div class="container">
-        <div class="columns">
-            <div class="column is-4">
-                <div class="card section">
-                    <div class="card-image">
-                        <p class="has-text-centered">
-                            <i style="font-size: 5rem"
-                               class="fa fa-camera-retro icon-block"></i>
-                        </p>
-                    </div>
-                    <div class="card-content">
-                        <div class="content">
-                            First Lorem ipsum dolor sit amet, consectetur
-                            adipiscing
-                            elit.
-                            Phasellus nec iaculis mauris. <a>@bulmaio</a>.
-                            <a>#css</a> <a>#responsive</a>
-                            <br>
-                            <small>11:09 PM - 1 Jan 2016</small>
+    {% if pagename == 'index' %}
+        <div class="container">
+            <div class="columns">
+                <div class="column is-4">
+                    <div class="card section">
+                        <div class="card-image">
+                            <p class="has-text-centered">
+                                <i style="font-size: 5rem"
+                                   class="fa fa-camera-retro icon-block"></i>
+                            </p>
+                        </div>
+                        <div class="card-content">
+                            <div class="content">
+                                First Lorem ipsum dolor sit amet, consectetur
+                                adipiscing
+                                elit.
+                                Phasellus nec iaculis mauris. <a>@bulmaio</a>.
+                                <a>#css</a> <a>#responsive</a>
+                                <br>
+                                <small>11:09 PM - 1 Jan 2016</small>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="column is-4">
-                <div class="card section">
-                    <div class="card-image">
-                        <p class="has-text-centered">
-                            <i style="font-size: 5rem"
-                               class="fa fa-camera-retro icon-block"></i>
-                        </p>
-                    </div>
-                    <div class="card-content">
-                        <div class="content">
-                            Second Lorem ipsum dolor sit amet, consectetur
-                            adipiscing
-                            elit.
-                            Phasellus nec iaculis mauris. <a>@bulmaio</a>.
-                            <a>#css</a> <a>#responsive</a>
-                            <br>
-                            <small>11:09 PM - 1 Jan 2016</small>
+                <div class="column is-4">
+                    <div class="card section">
+                        <div class="card-image">
+                            <p class="has-text-centered">
+                                <i style="font-size: 5rem"
+                                   class="fa fa-camera-retro icon-block"></i>
+                            </p>
+                        </div>
+                        <div class="card-content">
+                            <div class="content">
+                                Second Lorem ipsum dolor sit amet, consectetur
+                                adipiscing
+                                elit.
+                                Phasellus nec iaculis mauris. <a>@bulmaio</a>.
+                                <a>#css</a> <a>#responsive</a>
+                                <br>
+                                <small>11:09 PM - 1 Jan 2016</small>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="column is-4">
-                <div class="card section">
-                    <div class="card-image">
-                        <p class="has-text-centered">
-                            <i style="font-size: 5rem"
-                               class="fa fa-camera-retro icon-block"></i>
-                        </p>
-                    </div>
-                    <div class="card-content">
-                        <div class="content">
-                            Third Lorem ipsum dolor sit amet, consectetur
-                            adipiscing
-                            elit.
-                            Phasellus nec iaculis mauris. <a>@bulmaio</a>.
-                            <a>#css</a> <a>#responsive</a>
-                            <br>
-                            <small>11:09 PM - 1 Jan 2016</small>
+                <div class="column is-4">
+                    <div class="card section">
+                        <div class="card-image">
+                            <p class="has-text-centered">
+                                <i style="font-size: 5rem"
+                                   class="fa fa-camera-retro icon-block"></i>
+                            </p>
+                        </div>
+                        <div class="card-content">
+                            <div class="content">
+                                Third Lorem ipsum dolor sit amet, consectetur
+                                adipiscing
+                                elit.
+                                Phasellus nec iaculis mauris. <a>@bulmaio</a>.
+                                <a>#css</a> <a>#responsive</a>
+                                <br>
+                                <small>11:09 PM - 1 Jan 2016</small>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    {% endif %}
+    {% if pagename != 'index' %}
+        <div class="container">
+            <div class="columns is-mobile">
+                <div class="column is-10 is-offset-1">
+                    <div class="content blog-post section">
+                        <p class="has-text-right has-text-muted">published 2
+                            days
+                            ago</p>
+                        <p>
+                            {% block body %} {% endblock %}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endif %}
 </div>
 <footer class="footer">
     <div class="container">
