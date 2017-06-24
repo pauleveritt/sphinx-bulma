@@ -51,3 +51,7 @@ Time to convert the header to be a Sphinx-driven dynamic template. Iterate
 over ``rellinks`` and make header nav entries. Add a "Home" in front and
 point it and the logo to the ``master_doc``. Change the download thing
 to the search box.
+
+Went a bit farther than I should. Put in some (dumb) tests to see if we are
+on the home page. If so, put in the hero and 3 columns. If not, put in
+the page contents.
