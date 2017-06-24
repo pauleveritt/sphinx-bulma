@@ -43,3 +43,12 @@ Start with
 `its HTML <https://github.com/dansup/bulma-templates/blob/gh-pages/templates/hero.html>`_.
 When the browser is small and responsiveness kicks in, provide a small JS
 to handle the button click.
+
+header_template
+===============
+
+Time to convert the header to be a Sphinx-driven dynamic template. Iterate
+over ``rellinks`` and make header nav entries. Add a "Home" in front and
+point it and the logo to the ``master_doc``. Change the download thing
+to the search box.
+

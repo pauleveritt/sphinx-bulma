@@ -30,4 +30,13 @@ $color-invert: $blue;
   font-size: 5em;
 }
 
+.nav-item .search .field .control {
+  margin-top: 12px;
+  .input {
+    background-color: $grey-darker;
+    color: $grey-light;
+    border: $grey-dark;
+  }
+}
+
 @import "../../node_modules/bulma/bulma";

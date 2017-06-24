@@ -19,6 +19,13 @@
 .icon-block {
   font-size: 5em; }
 
+.nav-item .search .field .control {
+  margin-top: 12px; }
+  .nav-item .search .field .control .input {
+    background-color: #363636;
+    color: #b5b5b5;
+    border: #4a4a4a; }
+
 /*! bulma.io v0.4.2 | MIT License | github.com/jgthms/bulma */
 @keyframes spinAround {
   from {

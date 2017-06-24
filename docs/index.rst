@@ -1,5 +1,5 @@
-Welcome to sphinx-bulma's documentation!
-========================================
+Home
+====
 
 .. toctree::
    :maxdepth: 2
