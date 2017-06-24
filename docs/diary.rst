@@ -29,4 +29,15 @@ livereload requirements.
 Made a basic src/sphinx_bulma/sphinx_bulma_base.scss which imported
 everything and did no substituting. Need to get it included, so for now,
 just did an @import on the first line in css_t.
-xx
+
+For now, scrap this work. Instead of making alabaster_bulma, go back to
+making a nice Bulma layout. Then, "port" to Jinja2/Sphinx/Alabaster.
+
+nice_bulma_layout
+=================
+
+The
+`Hero template <https://dansup.github.io/bulma-templates/templates/hero.html>`_
+has a nice home page layout, with the splash image I'm looking for.
+Start with
+`its HTML <https://github.com/dansup/bulma-templates/blob/gh-pages/templates/hero.html>`_.
