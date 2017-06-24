@@ -41,3 +41,5 @@ The
 has a nice home page layout, with the splash image I'm looking for.
 Start with
 `its HTML <https://github.com/dansup/bulma-templates/blob/gh-pages/templates/hero.html>`_.
+When the browser is small and responsiveness kicks in, provide a small JS
+to handle the button click.
