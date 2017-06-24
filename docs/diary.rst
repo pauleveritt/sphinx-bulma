@@ -55,3 +55,8 @@ to the search box.
 Went a bit farther than I should. Put in some (dumb) tests to see if we are
 on the home page. If so, put in the hero and 3 columns. If not, put in
 the page contents.
+
+sphinx_assets
+=============
+
+Need to get the CSS and JS from Sphinx.
