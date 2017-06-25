@@ -16,3 +16,6 @@ You can run a development server based on
 
 As your `*.rst` files change, or anything in `src`, Sphinx will rebuild and
 your browser will reload.
+
+If you are editing the SCSS, make sure to ``npm run scss`` to start the
+watcher.
