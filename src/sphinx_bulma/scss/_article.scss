@@ -1,0 +1,21 @@
+.sb-article {
+  .sb-body .section h1:first-of-type {
+    display: none;
+  }
+
+  div.note {
+    background-color: #EEE;
+    border: 1px solid #CCC;
+  }
+
+  .section .section {
+    padding-top: 0;
+    padding-bottom: 2rem;
+  }
+
+  .menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+}

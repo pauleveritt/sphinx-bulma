@@ -7,8 +7,10 @@
     <title>sphinx_bulma</title>
     <link rel="stylesheet"
           href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="{{ pathto('_static/basic.css', 1) }}" type="text/css">
-    <link rel="stylesheet" href="{{ pathto('_static/pygments.css', 1) }}" type="text/css">
+    <link rel="stylesheet" href="{{ pathto('_static/basic.css', 1) }}"
+          type="text/css">
+    <link rel="stylesheet" href="{{ pathto('_static/pygments.css', 1) }}"
+          type="text/css">
     <link rel="stylesheet"
           href="{{ pathto('_static/sphinx_bulma.css', 1) }}"
           type="text/css"/>
@@ -71,24 +73,57 @@
         </header>
     </div>
     {% if pagename == 'index' %}
-        {%  include 'homepage-hero.html' %}
+        {% include 'homepage-hero.html' %}
     {% endif %}
 </section>
 <div class="section main">
     {% if pagename == 'index' %}
-        {%  include 'homepage-body.html' %}
+        {% include 'homepage-body.html' %}
     {% endif %}
     {% if pagename != 'index' %}
-        <div class="container">
-            <div class="columns is-mobile">
-                <div class="column is-10 is-offset-1">
-                    <div class="content blog-post section">
-                        <p class="has-text-right has-text-muted">published 2
-                            days
-                            ago</p>
-                        <p>
-                            {% block body %} {% endblock %}
-                        </p>
+        <div class="container sb-article">
+            <div class="columns is-desktop is-1-tablet">
+                <div class="column is-2">
+                    <div class="content">
+                        <aside class="menu">
+                            <p class="menu-label">
+                                General
+                            </p>
+                            <ul class="menu-list">
+                                <li><a>Dashboard</a></li>
+                                <li><a>Customers</a></li>
+                            </ul>
+                            <p class="menu-label">
+                                Administration
+                            </p>
+                            <ul class="menu-list">
+                                <li><a>Team Settings</a></li>
+                                <li>
+                                    <a class="is-active">Manage Your Team</a>
+                                    <ul>
+                                        <li><a>Members</a></li>
+                                        <li><a>Plugins</a></li>
+                                        <li><a>Add a member</a></li>
+                                    </ul>
+                                </li>
+                                <li><a>Invitations</a></li>
+                                <li><a>Cloud Storage Environment Settings</a>
+                                </li>
+                                <li><a>Authentication</a></li>
+                            </ul>
+                        </aside>
+                    </div>
+                </div>
+                <div class="column is-10">
+                    {% set post = ablog[pagename] %}
+                    <div class="content section sb-body">
+                        <div class="section">
+                            <h2 class="title is-2">{{ title }}</h2>
+                            {% if post.date %}
+                                <h2 class="title is-6">{{ post.date.strftime(gettext(ablog.post_date_format)) }}</h2>
+                            {% endif %}
+                        </div>
+                        {% block body %} {% endblock %}
                     </div>
                 </div>
             </div>
@@ -116,14 +151,14 @@
     </div>
 </footer>
 <script type="text/javascript">
-  var DOCUMENTATION_OPTIONS = {
-    URL_ROOT:    '{{ url_root }}',
-    VERSION:     '{{ release|e }}',
-    COLLAPSE_INDEX: false,
-    FILE_SUFFIX: '{{ '' if no_search_suffix else file_suffix }}',
-    HAS_SOURCE:  {{ has_source|lower }},
-    SOURCELINK_SUFFIX: '{{ sourcelink_suffix }}'
-  };
+    var DOCUMENTATION_OPTIONS = {
+        URL_ROOT: '{{ url_root }}',
+        VERSION: '{{ release|e }}',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '{{ '' if no_search_suffix else file_suffix }}',
+        HAS_SOURCE:  {{ has_source|lower }},
+        SOURCELINK_SUFFIX: '{{ sourcelink_suffix }}'
+    };
 </script>
 <script src="{{ pathto('_static/bulma.js', 1) }}"></script>
 </body>

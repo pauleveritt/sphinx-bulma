@@ -4334,3 +4334,19 @@ label.panel-block {
     border: #4a4a4a; }
   .nav-item .search .field .control .fa {
     color: #4a4a4a; }
+
+.sb-article .sb-body .section h1:first-of-type {
+  display: none; }
+
+.sb-article div.note {
+  background-color: #EEE;
+  border: 1px solid #CCC; }
+
+.sb-article .section .section {
+  padding-top: 0;
+  padding-bottom: 2rem; }
+
+.sb-article .menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
