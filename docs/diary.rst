@@ -64,9 +64,8 @@ Need to get the CSS and JS from Sphinx.
 Refactor the SCSS. Put into own directory, get rid (for now) of the .css_t
 and thus, change the .scss to be just sphinx_bulma.scss/css. Break it
 into several sub files and use the SCSS to suck in the Sphinx CSS, rather
-than issue extra web requests to get it.
-
-Use webpack to combine all the various JS.
+than issue extra web requests to get it. (Oops, can't, as the
+Sphinx CSS is ``.css_t``. Have to revisit that later.
 
 Refactor the main template to define is_home. Find some way to move all
 of that home page stuff into its own template.

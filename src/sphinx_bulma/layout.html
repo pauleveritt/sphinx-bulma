@@ -50,7 +50,7 @@
                            title="{{ rellink[1]|striptags|e }}"
                                 {{ accesskey(rellink[2]) }}>{{ rellink[3] }}</a>
                     {%- endfor %}
-                    <span class="nav-item">
+                    <span class="sb-header-search nav-item">
                         <form class="search" action="{{ pathto('search') }}">
                             <div class="field">
                               <p id="foo" class="control has-icons-right">
@@ -71,87 +71,12 @@
         </header>
     </div>
     {% if pagename == 'index' %}
-        <div class="hero-body">
-            <div class="container has-text-centered">
-                <h1 class="title is-2">
-                    Hero Heading
-                </h1>
-                <h2 class="subtitle is-5">
-                    A hero description could go here.
-                </h2>
-            </div>
-        </div>
+        {%  include 'homepage-hero.html' %}
     {% endif %}
 </section>
 <div class="section main">
     {% if pagename == 'index' %}
-        <div class="container">
-            <div class="columns">
-                <div class="column is-4">
-                    <div class="card section">
-                        <div class="card-image">
-                            <p class="has-text-centered">
-                                <i style="font-size: 5rem"
-                                   class="fa fa-camera-retro icon-block"></i>
-                            </p>
-                        </div>
-                        <div class="card-content">
-                            <div class="content">
-                                First Lorem ipsum dolor sit amet, consectetur
-                                adipiscing
-                                elit.
-                                Phasellus nec iaculis mauris. <a>@bulmaio</a>.
-                                <a>#css</a> <a>#responsive</a>
-                                <br>
-                                <small>11:09 PM - 1 Jan 2016</small>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="column is-4">
-                    <div class="card section">
-                        <div class="card-image">
-                            <p class="has-text-centered">
-                                <i style="font-size: 5rem"
-                                   class="fa fa-camera-retro icon-block"></i>
-                            </p>
-                        </div>
-                        <div class="card-content">
-                            <div class="content">
-                                Second Lorem ipsum dolor sit amet, consectetur
-                                adipiscing
-                                elit.
-                                Phasellus nec iaculis mauris. <a>@bulmaio</a>.
-                                <a>#css</a> <a>#responsive</a>
-                                <br>
-                                <small>11:09 PM - 1 Jan 2016</small>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="column is-4">
-                    <div class="card section">
-                        <div class="card-image">
-                            <p class="has-text-centered">
-                                <i style="font-size: 5rem"
-                                   class="fa fa-camera-retro icon-block"></i>
-                            </p>
-                        </div>
-                        <div class="card-content">
-                            <div class="content">
-                                Third Lorem ipsum dolor sit amet, consectetur
-                                adipiscing
-                                elit.
-                                Phasellus nec iaculis mauris. <a>@bulmaio</a>.
-                                <a>#css</a> <a>#responsive</a>
-                                <br>
-                                <small>11:09 PM - 1 Jan 2016</small>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        {%  include 'homepage-body.html' %}
     {% endif %}
     {% if pagename != 'index' %}
         <div class="container">
