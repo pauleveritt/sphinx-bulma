@@ -82,8 +82,8 @@
     {% endif %}
     {% if pagename != 'index' %}
         <div class="container sb-article">
-            <div class="columns is-desktop is-1-tablet">
-                <div class="column is-2">
+            <div class="columns is-desktop is-1-tablet .ordered-mobile">
+                <div class="column is-2 fl-1">
                     <div class="content">
                         <aside class="menu">
                             <p class="menu-label">
@@ -114,7 +114,7 @@
                         </aside>
                     </div>
                 </div>
-                <div class="column is-10">
+                <div class="column is-10 fl-2">
                     {% set post = ablog[pagename] %}
                     <div class="content section sb-body">
                         <div class="section">
