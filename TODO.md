@@ -1,11 +1,16 @@
 # TODO 
 
-- Merge
+- In layout, get header/section/section/footer correct
 
 ## Logo
 
 - Make into a "component"
+    * Separate directory
+    * Separate template
+    * Separate .scss
 
+- Do the other "components"
+- Reduce the amount of Bulma that is getting imported
 - Theme-settings to have an image or text
 
 - Rounded logo that expands outside of header
@@ -15,6 +20,8 @@
   * Smaller version of image
 
 ## Other
+
+- Use webpack to merge the JS
 
 - Home page hero heading splash area
 

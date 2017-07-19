@@ -4365,3 +4365,6 @@ label.panel-block {
     order: 1; }
   .ordered-mobile .fl-2 {
     order: 2; } }
+
+#sb-logo #yes {
+  font-size: 2rem; }

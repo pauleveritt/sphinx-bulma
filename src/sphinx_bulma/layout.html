@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{% from 'logo/logo.html' import logo %}
 <html>
 <head>
     <meta charset="utf-8">
@@ -28,12 +29,7 @@
     <div class="hero-head">
         <header class="nav">
             <div class="container">
-                <div class="nav-left">
-                    <a class="nav-item" href="#">
-                        <img src="{{ pathto('_static/bulma.png', 1) }}"
-                             alt="Logo">
-                    </a>
-                </div>
+                {{ logo(pathto, '_static/bulma.png') }}
                 <span class="nav-toggle">
                     <span></span>
                     <span></span>

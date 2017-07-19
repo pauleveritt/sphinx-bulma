@@ -69,4 +69,23 @@ Sphinx CSS is ``.css_t``. Have to revisit that later.
 
 Refactor the main template to define is_home. Find some way to move all
 of that home page stuff into its own template.
-xx
+
+logo-component
+==============
+
+Instead of one big global space of templates and variables, it would be
+nice to do like modern FE and have directories for components, each with
+the template/SCSS/JS/images that are needed. Sphinx and Jinja2 don't
+really make this too easy, but we can try.
+
+First, make a logo directory and move the jinja2 templating out of
+the master layout template, into a logo/logo.html template. Get this into
+the layout template "in some way". It would be nice to make this
+encapsulated (the globalness of Sphinx is an irritant.) Jinja2 includes
+look nice, but don't allow passing arguments and let the "component" have
+access to the current scope, so no dice. Let's try import, but later,
+we'll try to have a Python helper which means reg that renders.
+
+Another nice thing about import: it is cached somewhat. Later, with reg,
+we can have several flavors of caching.
+
