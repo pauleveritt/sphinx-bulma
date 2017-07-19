@@ -1,5 +1,8 @@
 @import "../../../node_modules/bulma/sass/utilities/initial-variables";
 
+.main {
+  padding-top: 2rem;
+}
 // TODO Let's hide the search box for now, since the JS isn't working
 .sb-header-search {
   display: none;

@@ -4302,6 +4302,9 @@ label.panel-block {
   background-color: whitesmoke;
   padding: 3rem 1.5rem 6rem; }
 
+.main {
+  padding-top: 2rem; }
+
 .sb-header-search {
   display: none; }
 
@@ -4334,6 +4337,9 @@ label.panel-block {
     border: #4a4a4a; }
   .nav-item .search .field .control .fa {
     color: #4a4a4a; }
+
+.sb-article .sb-body {
+  padding: 2rem; }
 
 .sb-article .sb-body .section h1:first-of-type {
   display: none; }

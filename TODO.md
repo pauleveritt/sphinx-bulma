@@ -1,8 +1,20 @@
 # TODO 
 
-- Less top gray area and white padding, get page started sooner
+- Merge
 
-- Switch primary color to teal?
+## Logo
+
+- Make into a "component"
+
+- Theme-settings to have an image or text
+
+- Rounded logo that expands outside of header
+
+- Responsive
+  * Eliminate words
+  * Smaller version of image
+
+## Other
 
 - Home page hero heading splash area
 
@@ -30,6 +42,9 @@
 ## Later
 
 - Comments
+
+- Normalize the padding and font-size settings by adopting Bulma 
+  pre-defined adjustments
 
 ## Much Later
 
