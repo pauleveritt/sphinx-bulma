@@ -1,6 +1,6 @@
 class ArticleComponent:
     sb_type = 'article'
-    sb_layout = 'layout2.html'
+    sb_layout = 'layout.html'
 
     def __init__(self, body):
         self.body = body
