@@ -76,23 +76,23 @@ def sb_startup(app, env, docnames):
 def sb_page_context(app, pagename, templatename, context, doctree):
     # If the page has a 'sb_type" field, use it to get the component
     # name. If not, default to the "page" component.
-    document_type = context.get('meta', {}).get('document_type', 'page')
+    document_type = context.get('meta', {}).get('sb_type', 'page')
 
     if document_type:
         # We have RST page with the magic marker at the top. Try to
         # get the page component that matches this magic marker.
-        component = document_types.get(document_type)  # site.get_component(document_type)
+        component = document_types.get(document_type)
 
         # Instantiate the component with what it needs
         body = context.get('body')
-        resource = component(body)
+        document = component(body)
 
         # Put things into the Sphinx html evaluation context
-        context['resource'] = resource
+        context['document'] = document
         context['sbc'] = app.components
 
         # Return the name of the template to use
-        return resource.template_name
+        return document.template_name
 
     # Otherwise, return the template name. Unnecessary, as Sphinx will
     # do this anyway, but helps to make clear the contract.
