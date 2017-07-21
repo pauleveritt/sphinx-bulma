@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/pauleveritt/sphinx-bulma#readme",
   "dependencies": {
-    "bulma": "^0.4.2"
+    "bulma": "^0.4.3"
   },
   "devDependencies": {
     "css-loader": "^0.28.4",

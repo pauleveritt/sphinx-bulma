@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
     entry: {
         app: './src/sphinx_bulma/index.js',
-        scss: './src/sphinx_bulma/sphinx_bulma.scss'
+        scss: './src/sphinx_bulma/sphinx_bulma_new.scss'
     },
     devtool: 'inline-source-map',
     plugins: [
