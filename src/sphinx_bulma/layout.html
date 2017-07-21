@@ -62,26 +62,10 @@
             </div>
         </header>
     </div>
-    {% if pagename == 'index' %}
-        {% include 'homepage-hero.html' %}
-    {% endif %}
+    {% block homepage_hero %}{% endblock %}
 </section>
 <div class="section main">
-    {% if pagename == 'index' %}
-        {% include 'homepage-body.html' %}
-    {% endif %}
-    {% if pagename != 'index' %}
-        <div class="container sb-article">
-            <div class="columns is-desktop is-1-tablet .ordered-mobile">
-                <div class="column is-2 fl-1">
-                    {{ sbc['sidenav']() }}
-                </div>
-                <div class="column is-10 fl-2">
-                    {% block body %} {% endblock %}
-                </div>
-            </div>
-        </div>
-    {% endif %}
+    {% block body %} {% endblock %}
 </div>
 <footer class="footer">
     <div class="container">

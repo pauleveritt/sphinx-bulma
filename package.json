@@ -7,7 +7,7 @@
     "doc": "docs"
   },
   "scripts": {
-    "scss": "node-sass --watch -o src/sphinx_bulma/static src/sphinx_bulma/scss/sphinx_bulma.scss"
+    "scss": "node-sass --watch -o src/sphinx_bulma/static src/sphinx_bulma/sphinx_bulma.scss"
   },
   "repository": {
     "type": "git",
