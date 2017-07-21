@@ -31,6 +31,7 @@ class Site:
 def sb_startup(app, env, docnames):
     # Make a "site"
     if not hasattr(env, 'site'):
+        # TODO this might be a bad idea, might get pickled
         env.site = Site()
 
 
