@@ -101,7 +101,7 @@ instantiated. This significantly increases the weirdness and complexity and
 rubs up against the ultimate use of reg, as it requires some sphinx event
 hooks to be used:
 
-- A .rst page can have a custom role that says what kind of page it is,
+- A .rst page can have a ``sb_type`` field that says what kind of page it is,
   e.g. an Article (later, the YAML thing)
 
 - This lets it have a custom Article component: class that renders
@@ -114,3 +114,8 @@ hooks to be used:
 
 - The Sphinx on-render event handler finds the right component and returns
   the template to use
+
+- Also let the component dictate the layout to use, possibly the
+  layout "component"
+
+- Have a default "page" component that is used if there is no sb_type marker
