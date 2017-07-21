@@ -5,6 +5,7 @@ Callbacks that are registered as Sphinx events in __init__.setup
 """
 
 from .article import ArticleComponent
+from .homepage import HomepageComponent
 from .page import PageComponent
 from .logo import LogoComponent
 
@@ -12,9 +13,10 @@ from .logo import LogoComponent
 class Site:
     def __init__(self):
         self.components = [
-            PageComponent,
             ArticleComponent,
-            LogoComponent
+            HomepageComponent,
+            LogoComponent,
+            PageComponent
         ]
 
     def get_component(self, component_name):
@@ -22,7 +24,7 @@ class Site:
         # the asked-for name, or None
         return next(
             (x for x in self.components
-             if x.sb_type == component_name),
+             if hasattr(x, 'sb_type') and x.sb_type == component_name),
             None)
 
 

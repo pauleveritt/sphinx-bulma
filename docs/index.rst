@@ -1,3 +1,5 @@
+:sb_type: homepage
+
 Home
 ====
 
