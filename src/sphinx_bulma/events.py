@@ -5,15 +5,23 @@ Callbacks that are registered as Sphinx events in __init__.setup
 """
 from collections.abc import MutableMapping
 
+# Document types
 from .article import ArticleDocument
-from .homepage import HomepageComponent
-from .page import PageComponent
+from .homepage import HomepageDocument
+from .page import PageDocument
+
+# Components
 from .sidenav import SidenavComponent
+from .logo import LogoComponent
 
 document_types = dict(
     article=ArticleDocument,
-    homepage=HomepageComponent,
-    page=PageComponent
+    homepage=HomepageDocument,
+    page=PageDocument
+)
+components = (
+    SidenavComponent,
+    # LogoComponent
 )
 
 
@@ -29,7 +37,7 @@ class Components(MutableMapping):
         # Make an instance of the component, with the app, and
         # store it with the key defined by the component.
         c = component(self.app)
-        self._storage[c.sb_type] = c
+        self._storage[c.name] = c
 
     def __setitem__(self, key, value):
         self._storage[key] = value
@@ -44,33 +52,10 @@ class Components(MutableMapping):
         return len(self._storage)
 
 
-# class Site:
-#     def __init__(self, app):
-#         self.app = app
-#         self.components = [
-#             ArticleDocument,
-#             HomepageComponent,
-#             PageComponent
-#         ]
-#
-#     def get_component(self, component_name):
-#         # Find the first component with a sb_name that matches
-#         # the asked-for name, or None
-#         return next(
-#             (x for x in self.components
-#              if hasattr(x, 'sb_type') and x.document_type == component_name),
-#             None)
-#
-#
 def sb_startup(app, env, docnames):
-    # Make a "site"
-    if not hasattr(app, 'site'):
-        # TODO this might be a bad idea, might get pickled
-        # app.site = Site(app)
-        ac = app.components = Components(app)
-        ac.add(SidenavComponent)
-    else:
-        raise NotImplementedError
+    # Make the registry of components
+    ac = app.components = Components(app)
+    [ac.add(c) for c in components]
 
 
 def sb_page_context(app, pagename, templatename, context, doctree):

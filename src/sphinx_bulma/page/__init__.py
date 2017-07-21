@@ -7,5 +7,5 @@ document does not have a sb_type field.
 from sphinx_bulma.base_document import BaseDocument
 
 
-class PageComponent(BaseDocument):
+class PageDocument(BaseDocument):
     document_type = 'page'

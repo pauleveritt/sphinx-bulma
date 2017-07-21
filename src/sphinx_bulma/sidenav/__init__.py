@@ -1,5 +1,5 @@
 class SidenavComponent:
-    sb_type = 'sidenav'
+    name = 'sidenav'
     _template = 'sidenav/sidenav.html'
 
     def __init__(self, app):
