@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+{% from 'logo/logo.html' import logo %}
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>sphinx_bulma</title>
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{{ pathto('_static/basic.css', 1) }}">
+    <link rel="stylesheet" href="{{ pathto('_static/pygments.css', 1) }}">
+    <link rel="stylesheet" href="{{ pathto('_static/sphinx_bulma.css', 1) }}">
+    <link rel="stylesheet" href="{{ pathto('_static/custom.css', 1) }}">
+    <script src="{{ pathto('_static/jquery.js', 1) }}"></script>
+    <script src="{{ pathto('_static/underscore.js', 1) }}"></script>
+    <script src="{{ pathto('_static/doctools.js', 1) }}"></script>
+    <script src="{{ pathto('_static/websupport.js', 1) }}"></script>
+    <script src="{{ pathto('_static/searchtools.js', 1) }}"></script>
+</head>
+<body>
+<section
+        class="hero is-primary is-large {{ 'header-image' if pagename == 'index' }}">
+    <div class="hero-head">
+        <header class="nav">
+            <div class="container">
+                {{ logo(pathto, '_static/bulma.png') }}
+                <span class="nav-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+                <div class="nav-right nav-menu" role="navigation"
+                     aria-label="related navigation">
+                    {% set rellinks = [
+                        ('/diary', 'Diary', '', 'The Diary')
+                    ] %}
+                    <a class="nav-item is-active"
+                       href="{{ pathto(master_doc) }}">Home</a>
+                    {%- for rellink in rellinks %}
+                        <a class="nav-item"
+                           href="{{ pathto(rellink[0]) }}"
+                           title="{{ rellink[1]|striptags|e }}"
+                                {{ accesskey(rellink[2]) }}>{{ rellink[3] }}</a>
+                    {%- endfor %}
+                    <span class="sb-header-search nav-item">
+                        <form class="search" action="{{ pathto('search') }}">
+                            <div class="field">
+                              <p id="foo" class="control has-icons-right">
+                                <input class="input" name="q"
+                                       placeholder="Search">
+                                <span class="icon is-small is-right">
+                                  <i class="fa fa-search"></i>
+                                </span>
+                              </p>
+                            </div>
+                          <input type="hidden" name="check_keywords"
+                                 value="yes"/>
+                          <input type="hidden" name="area" value="default"/>
+                        </form>
+                    </span>
+                </div>
+            </div>
+        </header>
+    </div>
+    {% if pagename == 'index' %}
+        {% include 'homepage-hero.html' %}
+    {% endif %}
+</section>
+<div class="section main">
+    {% if pagename == 'index' %}
+        {% include 'homepage-body.html' %}
+    {% endif %}
+    {% if pagename != 'index' %}
+        <div class="container sb-article">
+            <div class="columns is-desktop is-1-tablet .ordered-mobile">
+                <div class="column is-2 fl-1">
+                    <div class="content">
+                        <aside class="menu">
+                            <p class="menu-label">
+                                General
+                            </p>
+                            <ul class="menu-list">
+                                <li><a>Dashboard</a></li>
+                                <li><a>Customers</a></li>
+                            </ul>
+                            <p class="menu-label">
+                                Administration
+                            </p>
+                            <ul class="menu-list">
+                                <li><a>Team Settings</a></li>
+                                <li>
+                                    <a class="is-active">Manage Your Team</a>
+                                    <ul>
+                                        <li><a>Members</a></li>
+                                        <li><a>Plugins</a></li>
+                                        <li><a>Add a member</a></li>
+                                    </ul>
+                                </li>
+                                <li><a>Invitations</a></li>
+                                <li><a>Cloud Storage Environment Settings</a>
+                                </li>
+                                <li><a>Authentication</a></li>
+                            </ul>
+                        </aside>
+                    </div>
+                </div>
+                <div class="column is-10 fl-2">
+                    {% set post = ablog[pagename] %}
+                    <div class="content section sb-body">
+                        <div class="section">
+                            <h2 class="title is-2">{{ title }}</h2>
+                            {% if post.date %}
+                                <h2 class="title is-6">{{ post.date.strftime(gettext(ablog.post_date_format)) }}</h2>
+                            {% endif %}
+                        </div>
+                        {% block body %} {% endblock %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endif %}
+</div>
+<footer class="footer">
+    <div class="container">
+        <div class="content has-text-centered">
+            <p>
+                <strong>Bulma</strong> by <a href="http://jgthms.com">Jeremy
+                Thomas</a>. The source code is licensed
+                <a href="http://opensource.org/licenses/mit-license.php">MIT</a>.
+                The website content
+                is licensed <a
+                    href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC
+                ANS 4.0</a>.
+            </p>
+            <p>
+                <a class="icon" href="https://github.com/jgthms/bulma">
+                    <i class="fa fa-github"></i>
+                </a>
+            </p>
+        </div>
+    </div>
+</footer>
+<script type="text/javascript">
+    var DOCUMENTATION_OPTIONS = {
+        URL_ROOT: '{{ url_root }}',
+        VERSION: '{{ release|e }}',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '{{ '' if no_search_suffix else file_suffix }}',
+        HAS_SOURCE:  {{ has_source|lower }},
+        SOURCELINK_SUFFIX: '{{ sourcelink_suffix }}'
+    };
+</script>
+<script src="{{ pathto('_static/bulma.js', 1) }}"></script>
+</body>
+</html>

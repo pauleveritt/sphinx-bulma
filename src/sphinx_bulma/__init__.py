@@ -1,5 +1,7 @@
 import os
 
+from sphinx_bulma import events
+
 __version__ = "0.0.1"
 
 __title__ = "sphinx_bulma"
@@ -22,11 +24,21 @@ def get_path():
     return os.path.abspath(os.path.dirname(os.path.dirname(__file__)))
 
 
-def update_context(app, pagename, templatename, context, doctree):
-    context['sphinx_bulma_version'] = __version__
+def get_html_templates_path():
+    """Return path to theme's template folder.
+
+    Used by the doc project's config.py to hook into the template
+    setup.
+    """
+
+    pkgdir = os.path.abspath(os.path.dirname(__file__))
+
+    # We're going to store templates in components, not a template dir
+    return [os.path.join(pkgdir)]
 
 
 def setup(app):
-    app.connect('html-page-context', update_context)
+    app.connect('env-before-read-docs', events.sb_startup)
+    app.connect('html-page-context', events.sb_page_context)
     return {'version': __version__,
             'parallel_read_safe': True}

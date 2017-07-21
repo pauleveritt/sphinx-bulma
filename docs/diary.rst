@@ -1,3 +1,5 @@
+:sb_type: article
+
 =================
 Development Diary
 =================
@@ -89,3 +91,26 @@ we'll try to have a Python helper which means reg that renders.
 Another nice thing about import: it is cached somewhat. Later, with reg,
 we can have several flavors of caching.
 
+Next, refactor the SCSS to be isolated in the logo/logo.scss file and
+included into the master file. Ultimately, everything including
+layout/layout.scss will be isolated, except perhaps a sphinx-bulma specific
+_variables.scss.
+
+Then, as an experiment in really going components, have a class that gets
+instantiated. This significantly increases the weirdness and complexity and
+rubs up against the ultimate use of reg, as it requires some sphinx event
+hooks to be used:
+
+- A .rst page can have a custom role that says what kind of page it is,
+  e.g. an Article (later, the YAML thing)
+
+- This lets it have a custom Article component: class that renders
+  itself, selects the layout template to use, the template to render that
+  page (which is a big thing, get rid of the in-Jinja if/else/else),
+  SCSS, JS, images, etc.
+
+- An on-startup Sphinx event is hooked to populate a registry of components of
+  known components
+
+- The Sphinx on-render event handler finds the right component and returns
+  the template to use

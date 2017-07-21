@@ -32,10 +32,10 @@ import sphinx_bulma
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
-extensions = []
+extensions = ['sphinx_bulma']
 
 # Add any paths that contain templates here, relative to this directory.
-templates_path = ['_templates']
+templates_path = ['_templates'] + sphinx_bulma.get_html_templates_path()
 
 # The suffix(es) of source filenames.
 # You can specify multiple suffix as a list of string:
