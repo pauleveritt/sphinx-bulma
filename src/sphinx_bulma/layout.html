@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-{% from 'logo/logo.html' import logo %}
 <html>
 <head>
     <meta charset="utf-8">
@@ -27,7 +26,7 @@
     <div class="hero-head">
         <header class="nav">
             <div class="container">
-                {{ logo(pathto, '_static/bulma.png') }}
+                {{ sbc['logo'](logo_url=pathto('_static/bulma.png', 1)) }}
                 <span class="nav-toggle">
                     <span></span>
                     <span></span>

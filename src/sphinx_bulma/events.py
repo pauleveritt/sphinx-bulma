@@ -21,7 +21,7 @@ document_types = dict(
 )
 components = (
     SidenavComponent,
-    # LogoComponent
+    LogoComponent
 )
 
 

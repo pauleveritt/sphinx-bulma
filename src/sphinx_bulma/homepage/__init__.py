@@ -3,7 +3,7 @@
 Handle the homepage.
 
 """
-from sphinx_bulma.base_document import BaseDocument
+from sphinx_bulma.base import BaseDocument
 
 
 class HomepageDocument(BaseDocument):
