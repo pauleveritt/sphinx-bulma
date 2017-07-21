@@ -1,10 +1,5 @@
-class ArticleComponent:
-    sb_type = 'article'
-    sb_layout = 'layout.html'
+from sphinx_bulma.base_document import BaseDocument
 
-    def __init__(self, body):
-        self.body = body
 
-    @property
-    def template_name(self):
-        return 'article/article.html'
+class ArticleDocument(BaseDocument):
+    document_type = 'article'

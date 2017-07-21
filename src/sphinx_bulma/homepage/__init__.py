@@ -3,15 +3,9 @@
 Handle the homepage.
 
 """
+from sphinx_bulma.base_document import BaseDocument
 
 
-class HomepageComponent:
-    sb_type = 'homepage'
-    sb_layout = 'layout.html'
-
-    def __init__(self, body):
-        self.body = body
-
-    @property
-    def template_name(self):
-        return 'homepage/homepage.html'
+class HomepageComponent(BaseDocument):
+    document_type = 'homepage'
+    layout = 'layout.html'
