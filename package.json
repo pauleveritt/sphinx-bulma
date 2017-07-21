@@ -7,7 +7,8 @@
     "doc": "docs"
   },
   "scripts": {
-    "scss": "node-sass --watch -o src/sphinx_bulma/static src/sphinx_bulma/sphinx_bulma.scss"
+    "scss": "node-sass --watch -o src/sphinx_bulma/static src/sphinx_bulma/sphinx_bulma.scss",
+    "start": "webpack-dev-server"
   },
   "repository": {
     "type": "git",
@@ -23,6 +24,12 @@
     "bulma": "^0.4.2"
   },
   "devDependencies": {
-    "node-sass": "^4.5.3"
+    "css-loader": "^0.28.4",
+    "html-webpack-plugin": "^2.29.0",
+    "node-sass": "^4.5.3",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.18.2",
+    "webpack": "^3.3.0",
+    "webpack-dev-server": "^2.5.1"
   }
 }
