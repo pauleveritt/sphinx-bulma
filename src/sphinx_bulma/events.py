@@ -8,15 +8,18 @@ from .article import ArticleComponent
 from .homepage import HomepageComponent
 from .page import PageComponent
 from .logo import LogoComponent
+from .sidenav import SidenavComponent
 
 
 class Site:
-    def __init__(self):
+    def __init__(self, app):
+        self.app = app
         self.components = [
             ArticleComponent,
             HomepageComponent,
             LogoComponent,
-            PageComponent
+            PageComponent,
+            SidenavComponent(app)
         ]
 
     def get_component(self, component_name):
@@ -30,9 +33,9 @@ class Site:
 
 def sb_startup(app, env, docnames):
     # Make a "site"
-    if not hasattr(env, 'site'):
+    if not hasattr(app, 'site'):
         # TODO this might be a bad idea, might get pickled
-        env.site = Site()
+        app.site = Site(app)
 
 
 def sb_page_context(app, pagename, templatename, context, doctree):
@@ -43,7 +46,7 @@ def sb_page_context(app, pagename, templatename, context, doctree):
     if sb_type:
         # We have RST page with the magic marker at the top. Try to
         # get the page component that matches this magic marker.
-        site = app.env.site
+        site = app.site
         component = site.get_component(sb_type)
 
         # Instantiate the component with what it needs

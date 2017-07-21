@@ -19,6 +19,9 @@
     <script src="{{ pathto('_static/searchtools.js', 1) }}"></script>
 </head>
 <body>
+<p>
+    {{ site.get_component('sidenav')(x=12) }}
+</p>
 <section
         class="hero is-primary is-large {{ 'header-image' if pagename == 'index' }}">
     <div class="hero-head">
