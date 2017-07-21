@@ -1,5 +1,15 @@
 {%- extends document.layout %}
+
 {% block body %}
-    <h2>YESS:SLKDJLKJDSF:LKJDSFK</h2>
-    {{ body }}
+    {% set post = ablog[pagename] %}
+    <div class="content section sb-body">
+        <div class="section">
+            <h2 class="title is-2">{{ title }}</h2>
+            {% if post.date %}
+                <h2 class="title is-6">{{ post.date.strftime(gettext(ablog.post_date_format)) }}</h2>
+            {% endif %}
+        </div>
+        {{ body }}
+    </div>
+
 {% endblock %}
