@@ -1,6 +1,9 @@
+@import "../../../node_modules/bulma/sass/utilities/variables";
+
+
 // All nav elements should get a grey border when hovered
 .hero .hero-head .nav-item:hover {
-  border-bottom: 1px solid $grey-light;
+  border-bottom: 2px solid $grey;
 }
 
 // For each color scheme, make "active" the invert
@@ -31,4 +34,8 @@
 
 .header-image {
   background-image: linear-gradient(rgba(0, 0, 0, 0.49), rgba(0, 0, 0, 0.89)), url('https://images.unsplash.com/1/iphone-4-closeup.jpg?dpr=1&auto=format&crop=middle&fit=crop&w=2000&h=700&q=80');
+}
+
+.panel-block {
+  font-size: $size-small;
 }
