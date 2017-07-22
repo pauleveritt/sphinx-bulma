@@ -10,7 +10,7 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             title: 'Development',
-            template: 'playground/tutorial.html'
+            template: 'src/sphinx_bulma/navbar/navbar_demo.html'
         })
     ],
     output: {

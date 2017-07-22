@@ -1,7 +1,9 @@
 @import "../../node_modules/bulma/sass/utilities/initial-variables";
+@import "../../node_modules/bulma/sass/utilities/_all";
 
 //$family-primary: $family-sans-serif;
 //$color-invert: $blue;
 //$primary: $turquoise;
 
 @import "../../node_modules/bulma/bulma";
+@import "navbar/_navbar";
