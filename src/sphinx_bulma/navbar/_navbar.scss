@@ -70,3 +70,59 @@
     }
   }
 }
+
+.sb-portlet-primary {
+  .panel-heading {
+    background-color: $primary;
+    color: $primary-invert;
+  }
+}
+
+.sb-portlet-info {
+  .panel-heading {
+    background-color: $info;
+    color: $info-invert;
+  }
+}
+
+.sb-portlet-success {
+  .panel-heading {
+    background-color: $success;
+    color: $success-invert;
+  }
+}
+
+.sb-portlet-warning {
+  .panel-heading {
+    background-color: $warning;
+    color: $warning-invert;
+  }
+}
+
+.sb-portlet-danger {
+  .panel-heading {
+    background-color: $danger;
+    color: $danger-invert;
+  }
+}
+
+.sb-portlet-light {
+  .panel-heading {
+    background-color: $light;
+    color: $light-invert;
+  }
+}
+
+.sb-portlet-dark {
+  .panel-heading {
+    background-color: $dark;
+    color: $dark-invert;
+  }
+}
+
+.sb-portlet-info {
+  .panel-heading {
+    background-color: $info;
+    color: $info-invert;
+  }
+}
