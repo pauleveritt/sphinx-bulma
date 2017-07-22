@@ -1,6 +1,5 @@
 @import "../../../node_modules/bulma/sass/utilities/variables";
 
-
 // All nav elements should get a grey border when hovered
 .hero .hero-head .nav-item:hover {
   border-bottom: 2px solid $grey;
@@ -10,24 +9,31 @@
 .hero.is-primary .hero-head .nav-item.is-active {
   border-bottom: 2px solid $primary-invert;
 }
+
 .hero.is-info .hero-head .nav-item.is-active {
   border-bottom: 2px solid $info-invert;
 }
+
 .hero.is-success .hero-head .nav-item.is-active {
   border-bottom: 2px solid $success-invert;
 }
+
 .hero.is-warning .hero-head .nav-item.is-active {
   border-bottom: 2px solid $warning-invert;
 }
+
 .hero.is-danger .hero-head .nav-item.is-active {
   border-bottom: 2px solid $danger-invert;
 }
+
 .hero.is-light .hero-head .nav-item.is-active {
   border-bottom: 2px solid $light-invert;
 }
+
 .hero.is-dark .hero-head .nav-item.is-active {
   border-bottom: 2px solid $dark-invert;
 }
+
 .hero.is-info .hero-head .nav-item.is-active {
   border-bottom: 2px solid $info-invert;
 }
@@ -38,4 +44,29 @@
 
 .panel-block {
   font-size: $size-small;
+}
+
+.sb-listing-title a {
+  color: inherit;
+}
+
+.sb-listing-synopsis {
+  font-size: $size-small;
+  font-weight: lighter;
+}
+
+.sb-listing-timeago {
+  font-size: $size-small;
+  width: 8rem;
+  text-align: right;
+}
+
+.sb-listing-table {
+  tr {
+    height: 5rem;
+
+    td {
+      border: none;
+    }
+  }
 }
